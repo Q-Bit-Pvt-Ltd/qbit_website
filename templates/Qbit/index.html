@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+{% load static %}
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Q-bit</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'Qbit/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'Qbit/css/vendor.css' %}">
+
+    <!-- script
+    ================================================== -->
+    <script src="{% static 'Qbit/js/modernizr.js' %}"></script>
+    <script defer src="{%  static 'Qbit/js/fontawesome/all.min.js' %}"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="icon" href="{% static 'Qbit/images/favicon.png' %}" type="image/png">
+
+
+
+</head>
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="s-header__logo">
+            <a href="index.html">
+                <img src="{% static 'Qbit/images/color.png' %}" alt="Homepage">
+            </a>
+        </div>
+
+        <div class="s-header__content">
+
+            <nav class="s-header__nav-wrap">
+                <ul class="s-header__nav">
+                    <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
+                    <li><a class="smoothscroll" href="#about" title="About">About</a></li>
+                    <li><a class="smoothscroll" href="#services" title="Services">Services</a></li>
+                    <li><a class="smoothscroll" href="#portfolio" title="Works">Works</a></li>
+                </ul>
+            </nav> <!-- end s-header__nav-wrap -->
+
+            <a href="mailto:#0" class="btn btn--primary btn--small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z" />
+                </svg>
+                Contact Support
+            </a>
+
+        </div> <!-- end header-content -->
+
+        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- hero
+    ================================================== -->
+    <section id="hero" class="s-hero target-section">
+
+        <div class="s-hero__bg">
+            <div class="gradient-overlay"></div>
+        </div>
+
+        <div class="row s-hero__content">
+            <div class="column">
+
+                <h1>Q-Bit.</h1>
+                <div class="s-hero__content-about">
+
+                    <p>
+                        Unleashing Possibilities In Every Bit.
+                    </p>
+
+
+
+
+                    <footer>
+
+                        <div class="s-hero__content-social">
+                            <a href="https://www.facebook.com/your-profile" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com/@qbit_info
+                            " target="_blank" aria-label="Twitter">
+                                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.instagram.com/qbitinfo" target="_blank" aria-label="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </footer>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="s-hero__scroll">
+            <a href="#about" class="s-hero__scroll-link smoothscroll">
+                Scroll Down
+            </a>
+        </div>
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about">
+
+        <div class="horizontal-line"></div>
+
+        <div class="row">
+            <div class="column large-12">
+
+                <div class="section-title" data-num="01" data-aos="fade-up">
+                    <h3 class="h6">Who We Are</h3>
+                </div>
+
+            </div>
+
+            <div class="column large-6 w-900-stack s-about__intro-text">
+                <h1 class="display-1" data-aos="fade-up" data-aos-duration="200">
+                    At QBit, we are dedicated to creating impactful solutions that balance innovation and
+                    sustainability.
+                </h1>
+
+                <p class="lead" data-aos="fade-up">
+                    Our team brings forward-thinking ideas to life by embracing adaptability, simplicity,
+                    and a pragmatic approach to problem-solving. We envision a future where technology seamlessly
+                    integrates with environmental and social responsibility, crafting meaningful progress for a brighter
+                    tomorrow.
+                </p>
+            </div>
+
+            <div class="column large-6 w-900-stack s-about__photo-block">
+                <div class="s-about__photo" data-aos="fade-up" data-aos-duration="200"></div>
+            </div>
+        </div>
+
+        <div class="row block-large-1-2 block-tab-full s-about__process item-list">
+            <div class="column item item-process" data-aos="fade-up" data-aos-duration="200">
+                <h3 class="item-title">Innovation</h3>
+                <p>
+                    We foster innovation that lead to groundbreaking
+                    solutions.We empower every team member to bring forward innovative
+                    ideas, knowing that true innovation starts with the freedom to imagine
+                    the future..
+                </p>
+            </div>
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Sustainability</h3>
+                <p>
+                    We aim for sustainable practices that maintain the
+                    balance of our society without comprising our future. Sustainability is
+                    at the core of our mission, where every decision is made with the
+                    planet and people in mind.
+                </p>
+            </div>
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Adaptability</h3>
+                <p>
+                    We embrace change and respond to changes in the
+                    market environment while maintaining our long-term goals. Our team
+                    is primed for innovative responsiveness, adapting our strategies to
+                    meet both current demands and emerging trends.
+                </p>
+            </div>
+            <div class="column item item-process" data-aos="fade-up">
+                <h3 class="item-title">Simplicity</h3>
+                <p>
+                    We streamline operations, save time and focus on growth.
+                    Our commitment to simplicity ensures that our solutions are clear,
+                    precise, and effective in meeting client needs.
+            </div>
+        </div>
+
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id="services" class="s-services">
+
+        <div class="row">
+            <div class="column large-12">
+                <div class="section-title" data-num="02" data-aos="fade-up">
+                    <h3 class="h6">Our Expertise</h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up">
+                    At Q-Bit, we don’t just deliver services — we craft solutions that tell your story,
+                    embody your brand, and push the boundaries of what’s possible in the digital space.
+                </h1>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <p class="lead" data-aos="fade-up">
+                    At Q-Bit, we thrive at the intersection of creativity, technology, and innovation. Our expertise
+                    spans across end-to-end development,
+                    where we build dynamic web and mobile applications that not only meet but exceed industry standards.
+                    From designing sleek, responsive user interfaces
+                    to implementing reliable and scalable back-end solutions, our Full Stack Development team ensures a
+                    seamless digital experience for every project.
+                </p>
+            </div>
+        </div>
+
+        <div class="row block-large-1-2 block-tab-full s-services__services item-list">
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--product-design"></span>
+                <h3 class="item-title">Full Stack Development</h3>
+                <p>
+                    Our Full Stack Development team is equipped to handle everything from the front-end to the back-end,
+                    delivering seamless and robust web and mobile applications.
+                    Whether it’s building a dynamic website, crafting an intuitive user interface,
+                    or ensuring your server-side logic is flawless, Q-Bit has got you covered. We code with precision,
+                    ensuring every bit counts and every query is answered.
+                </p>
+            </div>
+            <div class="column item item-service" data-aos="fade-up">
+                <span class="service-icon service-icon--branding"></span>
+                <h3 class="item-title">Media Design Mastery</h3>
+                <p>
+                    Transform your vision into stunning visuals with Q-Bit’s Media Design services. Our talented
+                    designers and editors are masters of their craft,
+                    creating captivating video edits, striking graphical designs, and imaginative conceptual art. We
+                    turn every frame into a work of art and every
+                    pixel into a masterpiece. At Q-Bit, we don’t just design; we bring your brand’s story to life with
+                    every bit of creativity and every quantum of innovation.
+
+                </p>
+            </div>
+
+            <div class="row block-large-1-2 block-tab-full s-services__services item-list">
+                <div class="column item item-service" data-aos="fade-up">
+                    <span class="service-icon service-icon--research"></span>
+                    <h3 class="item-title">Website Migration</h3>
+                    <p>
+                        At Q-Bit, we transform the complex process of website migration into a smooth and effortless
+                        journey.
+                        Our dedicated team of experts handles every aspect of your migration, ensuring your digital
+                        presence transitions flawlessly
+                    </p>
+                </div>
+            </div>
+    </section> <!-- end s-services -->
+
+    <section id="portfolio" class="s-portfolio">
+
+        <div class="row s-porfolio__top">
+            <div class="column large-6 w-900-stack">
+                <div class="section-title" data-num="03" data-aos="fade-up">
+                    <h3 class="h6">Products</h3>
+                </div>
+            </div>
+            <div class="column large-6 w-900-stack">
+                <h1 class="display-1" data-aos="fade-up">
+                    Here are the products engineered for the future.
+                </h1>
+            </div>
+        </div> <!-- end s-portfolio__top-->
+
+        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
+
+            <div class="column" data-aos="fade-up">
+                <div class="folio-item">
+                    <div class="folio-item__thumb">
+                        <a class="folio-item__thumb-link" href="{% static 'Qbit/images/portfolio/gallery/g-cropsync.jpg' %}"
+                            title="CropSync" data-size="1050x700">
+                            <img src="{% static 'Qbit/images/portfolio/cropsync.jpg' %}"
+                                >
+                        </a>
+                    </div>
+                    <div class="folio-item__info">
+                        <div class="folio-item__cat"></div>
+                        <h4 class="folio-item__title">CropSync</h4>
+                    </div>
+                    <a href="#" title="Project Link" class="folio-item__project-link">
+                        Product Link
+                    </a>
+                    <div class="folio-item__caption">
+
+                    </div>
+                </div>
+            </div> <!-- end column -->
+        </div> <!-- folio-list -->
+
+    </section> <!-- end s-portfolio -->
+
+
+
+    </div> <!-- end row -->
+
+
+    </div> <!-- end s-clients -->
+
+    <div class="space"></div>
+    <!-- contact
+    ================================================== -->
+    <section class="s-contact">
+
+        <div class="row narrower s-contact__top h-text-center">
+            <div class="column">
+                <h3 class="h6">Contact Us</h3>
+                <h1 class="display-1">
+                    Join the Q-Bit revolution and let us take your digital
+                    presence to the next level. Every project is a journey,
+                    and we ensure that every bit of it is exceptional.
+                </h1>
+            </div>
+        </div> <!-- s-footer__top -->
+
+        <div class="row h-text-center">
+            <div class="column">
+                <p class="s-contact__email">
+                    <a href="mailto:#0">qbitcontact.in@gmail.com</a>
+                </p>
+            </div>
+        </div>
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row row-y-top">
+
+            <div class="column large-8 medium-12">
+                <div class="row">
+                    <div class="column large-7 tab-12 s-footer__block">
+                        <h4 class="h6">Where to Find Us</h4>
+
+                        <p>
+                            Kottayam <br>
+                            Kerala,India <br>
+                            PIN:686004 <br>
+                            <a href="tel:197-543-2345">+918139006996</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="column large-4 medium-12 s-footer__block--end">
+                <a href="mailto:#0" class="btn h-full-width">Let's Talk</a>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    top
+                </a>
+            </div> <!-- end ss-go-top -->
+
+        </div>
+    </footer>
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                        title="Share"></button> <button class="pswp__button pswp__button--fs"
+                        title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="{% static 'Qbit/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'Qbit/js/plugins.js' %}"></script>
+    <script src="{% static 'Qbit/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropSync - Coming Soon</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Cropsync/css/styles.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+</head>
+<body>
+    <div class="coming-soon-container">
+        <div class="logo-container">
+            <img src="{% static 'Cropsync/images/crop_sync.jpg' %}" alt="CropSync Logo" class="logo">
+        </div>
+        <div class="countdown">
+            <h1>Our New App is Coming Soon!</h1>
+            <p id="countdown-timer">Launching in 00:00:00</p>
+        </div>
+        <div class="animation-container">
+            <canvas id="bg-animation"></canvas>
+        </div>
+        <div class="footer">
+            <p>Stay tuned for updates on <span class="highlight">CropSync</span></p>
+            <p>© 2024 CropSync. All Rights Reserved.</p>
+        </div>
+    </div>
+    <script src="{% static 'Cropsync/js/script.js' %}"></script>
+</body>
+</html>

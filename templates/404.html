@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #0d1117;
+            color: #e6edf3;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Starry background animation */
+        @keyframes stars {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        .stars {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+            opacity: 0.2;
+            animation: stars 50s linear infinite;
+            z-index: -1;
+        }
+
+        /* Glitch effect for 404 text */
+        .glitch {
+            font-size: 100px;
+            color: #e6edf3;
+            text-transform: uppercase;
+            position: relative;
+            animation: glitchEffect 1s infinite alternate-reverse;
+            margin: 0;
+            letter-spacing: 5px;
+        }
+        .glitch::before, .glitch::after {
+            content: '404';
+            position: absolute;
+            left: 0;
+            color: #e6edf3;
+            background: #0d1117;
+        }
+        .glitch::before {
+            animation: glitchTop 2s infinite linear alternate-reverse;
+            color: #ff4f81;
+        }
+        .glitch::after {
+            animation: glitchBottom 1.5s infinite linear alternate-reverse;
+            color: #0fd9f9;
+        }
+
+        /* Particle effect */
+        @keyframes particleMove {
+            0% { transform: translateY(0); opacity: 0.8; }
+            100% { transform: translateY(-200px); opacity: 0; }
+        }
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .particle {
+            position: absolute;
+            bottom: -10px;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: particleMove linear;
+        }
+
+        /* Description text */
+        .description {
+            font-size: 20px;
+            color: #bbb;
+            margin: 10px 0;
+            opacity: 0.8;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        /* Return Home Button */
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #0fd9f9;
+            color: #0d1117;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            box-shadow: 0 0 10px #0fd9f9, 0 0 20px #ff4f81;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        .button:hover {
+            background: #ff4f81;
+            color: #fff;
+            box-shadow: 0 0 15px #ff4f81, 0 0 30px #0fd9f9;
+            transform: scale(1.05);
+        }
+
+        /* Fade-in effect */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Glitch animation */
+        @keyframes glitchEffect {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        @keyframes glitchTop {
+            0% { clip: rect(0, 900px, 0, 0); }
+            20% { clip: rect(10px, 900px, 40px, 0); }
+            40% { clip: rect(50px, 900px, 30px, 0); }
+            60% { clip: rect(30px, 900px, 60px, 0); }
+            80% { clip: rect(60px, 900px, 20px, 0); }
+            100% { clip: rect(10px, 900px, 0, 0); }
+        }
+        @keyframes glitchBottom {
+            0% { clip: rect(50px, 900px, 100px, 0); }
+            20% { clip: rect(20px, 900px, 70px, 0); }
+            40% { clip: rect(60px, 900px, 40px, 0); }
+            60% { clip: rect(40px, 900px, 80px, 0); }
+            80% { clip: rect(70px, 900px, 50px, 0); }
+            100% { clip: rect(30px, 900px, 90px, 0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="particles"></div>
+
+    <h1 class="glitch">404</h1>
+    <p class="description">Oops! It seems you're lost in space.</p>
+    <a href="/" class="button">Take Me Home</a>
+
+    <script>
+        // Generate particles for floating animation
+        const particles = document.querySelector('.particles');
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDuration = Math.random() * 2 + 3 + 's';
+            particle.style.opacity = Math.random();
+            particles.appendChild(particle);
+
+            particle.addEventListener('animationend', () => {
+                particle.remove();
+            });
+        }
+        setInterval(createParticle, 100);
+    </script>
+</body>
+</html>
