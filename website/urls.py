@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Qbit.urls')),
     path('', include('Cropsync.urls')), 
-    path('', include('firebase.urls')), 
+
 ]

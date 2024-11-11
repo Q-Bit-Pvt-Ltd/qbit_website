@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>Contact Us</title>
+
+    <!-- External libraries for animations and icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'Qbit/css/styles2.css' %}">
+
+    <style>
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form method="POST" action="{% url 'contact' %}" id="contactForm">
+            {% csrf_token %}
+
+            <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" name="county" placeholder="Your County" required>
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" name="state" placeholder="Your State" required>
+                <i class="fas fa-city"></i>
+            </div>
+
+            <div class="input-wrapper">
+                <textarea name="address" placeholder="Message" required></textarea>
+                <i class="fas fa-comment-dots"></i>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" name="phone_number" placeholder="Your Phone Number" required>
+                <i class="fas fa-phone"></i>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+
+            <button type="submit" id="submitBtn">Submit</button>
+            <div class="loading" id="loading">Submitting...</div>
+        </form>
+
+        <div class="success-message" id="successMessage">
+            <i class="fas fa-thumbs-up thumbs-up"></i>
+           
+        </div>
+
+        <div class="failure-message" id="failureMessage">There was an issue submitting your form. Please try again.
+        </div>
+    </div>
+
+    <script src="{% static 'Qbit/js/main2.js' %}"></script>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>
